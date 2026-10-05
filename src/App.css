@@ -1,0 +1,245 @@
+.app {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 1.5rem 1rem 3rem;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 2px;
+}
+
+.panel {
+  background: var(--panel);
+  border-radius: 12px;
+  padding: 1rem 1.25rem;
+  margin-block: 1rem;
+}
+
+h1 {
+  font-size: 1.75rem;
+  margin-bottom: 0.25rem;
+}
+h2 {
+  font-size: 1.25rem;
+  margin-top: 0;
+}
+h3 {
+  font-size: 1rem;
+  margin: 0 0 0.25rem;
+}
+
+button {
+  font: inherit;
+  min-height: 44px;
+  min-width: 44px;
+  padding: 0.4rem 1rem;
+  border: 2px solid var(--border);
+  border-radius: 8px;
+  background: transparent;
+  color: var(--fg);
+  cursor: pointer;
+}
+
+button[aria-pressed="true"] {
+  background: var(--fg);
+  color: var(--bg);
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.primary-btn {
+  background: var(--btn);
+  color: var(--btn-fg);
+  border-color: var(--btn);
+  font-weight: 600;
+}
+
+fieldset {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  margin: 0 0 1rem;
+}
+
+fieldset label {
+  margin-right: 1rem;
+  display: inline-flex;
+  gap: 0.4rem;
+  align-items: center;
+  min-height: 44px;
+}
+fieldset.inline {
+  margin: 0;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+}
+.image-upload {
+  display: grid;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+.thumb {
+  max-width: 240px;
+  max-height: 160px;
+  object-fit: contain;
+  border-radius: 8px;
+}
+.note,
+.status {
+  margin: 0.25rem 0;
+  font-size: 0.9rem;
+}
+
+.swatches {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.swatch {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+  background: var(--bg);
+}
+.swatch-color {
+  height: 80px;
+  display: grid;
+  place-items: center;
+  font-weight: 600;
+}
+.swatch-body {
+  padding: 0.75rem;
+}
+.swatch-actions {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
+}
+
+.hex-field input {
+  font:
+    1rem ui-monospace,
+    monospace;
+  width: 7.5em;
+  padding: 0.35rem;
+  background: var(--bg);
+  color: var(--fg);
+  border: 2px solid var(--border);
+  border-radius: 6px;
+}
+
+.preview {
+  background: var(--p-bg);
+  color: var(--p-text);
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+.preview-card {
+  background: var(--p-surface);
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  margin: 0.75rem 0;
+}
+.preview-link {
+  color: var(--p-primary);
+  text-decoration: underline;
+}
+.preview-badge {
+  display: inline-block;
+  background: var(--p-accent);
+  color: var(--p-on-accent);
+  padding: 0.1rem 0.6rem;
+  border-radius: 999px;
+  font-weight: 600;
+}
+
+.preview-buttons {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+.preview-buttons button {
+  border-color: transparent;
+  font-weight: 600;
+}
+.p-primary {
+  background: var(--p-primary);
+  color: var(--p-on-primary);
+}
+.p-secondary {
+  background: var(--p-secondary);
+  color: var(--p-on-secondary);
+}
+.p-accent {
+  background: var(--p-accent);
+  color: var(--p-on-accent);
+}
+.preview-buttons button:focus-visible {
+  outline-color: var(--p-text);
+}
+
+.report {
+  width: 100%;
+  border-collapse: collapse;
+}
+.report caption {
+  text-align: left;
+  margin-bottom: 0.5rem;
+}
+.report th,
+.report td {
+  text-align: left;
+  padding: 0.4rem;
+  border-bottom: 1px solid var(--border);
+}
+.chip {
+  display: inline-block;
+  width: 2.2rem;
+  text-align: center;
+  margin-right: 0.5rem;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+}
+
+textarea {
+  width: 100%;
+  box-sizing: border-box;
+  font:
+    0.9rem ui-monospace,
+    monospace;
+  background: var(--bg);
+  color: var(--fg);
+  border: 2px solid var(--border);
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    animation: none !important;
+  }
+}
